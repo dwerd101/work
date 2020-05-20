@@ -1,43 +1,50 @@
 package com.example.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.util.Set;
 
-
+@Entity
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "field")
+
 public class Field {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    @JsonProperty("id")
-    private int id;
+  //  @JsonProperty("id")
+    private long id;
 
     @Column(name = "field_name")
-    @JsonProperty("field_name")
+   // @JsonProperty("field_name")
     private String fieldName;
 
     @Column(name = "size")
-    @JsonProperty("size")
+   // @JsonProperty("size")
     private String size;
 
     @Column(name = "type")
-    @JsonProperty("type")
+   // @JsonProperty("type")
     private String type;
 
     @ManyToOne
-    @JoinColumn(name = "table_id", referencedColumnName = "id")
-    @JsonProperty("table_id")
-    private Table tableId;
+    @JoinColumn(name = "tables_id", referencedColumnName = "id")
+   // @JsonProperty("table_id")
+    @ToString.Exclude  private Tables tableId;
 
     @OneToMany(mappedBy = "fieldId", fetch = FetchType.LAZY)
-    Set<ProfileResult> profileResults;
+    @JsonIgnore
+    @ToString.Exclude  Set<ProfileResult> profileResults;
 
 
 }
