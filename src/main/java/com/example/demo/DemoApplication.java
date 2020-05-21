@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.example")
-@EnableJpaRepositories(basePackages = "com.example.controller")
+@EnableJpaRepositories(basePackages = "com.example.repository")
 @EntityScan(basePackages = "com.example.model")
 public class DemoApplication {
 
