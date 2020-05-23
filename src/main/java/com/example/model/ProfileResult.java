@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "profile_result")
+@javax.persistence.Table(name = "profile_result")
 public class ProfileResult {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

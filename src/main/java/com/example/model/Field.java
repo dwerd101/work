@@ -1,12 +1,10 @@
 package com.example.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -16,7 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Table(name = "field")
+@javax.persistence.Table(name = "field")
 
 public class Field {
     @Id
@@ -40,7 +38,7 @@ public class Field {
     @ManyToOne
     @JoinColumn(name = "tables_id", referencedColumnName = "id")
    // @JsonProperty("table_id")
-    @ToString.Exclude  private Tables tableId;
+    @ToString.Exclude  private Table tableId;
 
     @OneToMany(mappedBy = "fieldId", fetch = FetchType.LAZY)
     @JsonIgnore

@@ -15,8 +15,8 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Table(name = "tables")
-public class Tables {
+@javax.persistence.Table(name = "tables")
+public class Table {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +27,7 @@ public class Tables {
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id")
   //  @JsonProperty("id")
-    @ToString.Exclude   private Owners ownerId;
+    @ToString.Exclude   private Owner ownerId;
 
     @Column(name = "name")
 //    @JsonProperty("name")

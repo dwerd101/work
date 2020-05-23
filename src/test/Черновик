@@ -1,0 +1,12 @@
+   /*   Черновик
+
+      Page<ProfileResult> profileResults = profileResultService.findBySourceIdHibernate(standId, pageable);
+            Page<ProfileResultDto> pageProfileResultDto = profileResults.map(profileResult -> {
+                source.setName(profileResult.getFieldId().getTableId().getOwnerId().getSourceId().getName());
+                owner.setName(profileResult.getFieldId().getTableId().getOwnerId().getName());
+                table.setName(profileResult.getFieldId().getTableId().getName());
+                field.setFieldName(profileResult.getFieldId().getFieldName());
+                ProfileResultDto profileResultDto = ProfileMapper.INSTANCE.profileResultDto(profileResult,
+                        source, owner, table, field);
+                return profileResultDto;
+            });*/

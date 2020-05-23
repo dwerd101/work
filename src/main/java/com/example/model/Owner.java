@@ -1,7 +1,6 @@
 package com.example.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,8 +13,8 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Table(name = "owners")
-public class Owners {
+@javax.persistence.Table(name = "owners")
+public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -25,12 +24,12 @@ public class Owners {
     @ManyToOne
     @JoinColumn(name = "source_id", referencedColumnName = "id")
   //  @JsonProperty("id")
-    @ToString.Exclude   private Sources sourceId;
+    @ToString.Exclude   private Source sourceId;
 
     @Column(name = "name")
     private String name;
 
     @OneToMany(mappedBy = "ownerId", fetch = FetchType.LAZY)
     @JsonIgnore
-    @ToString.Exclude  Set<Tables> tables;
+    @ToString.Exclude  Set<Table> tables;
 }

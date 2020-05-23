@@ -12,11 +12,12 @@ public interface ProfileMapper {
     ProfileMapper INSTANCE = Mappers.getMapper(ProfileMapper.class);
     @Mappings({
             @Mapping(target = "profileId", source = "profileResult.id"),
-            @Mapping(target = "sourceName", source = "sources.name"),
-            @Mapping(target = "ownersName", source = "owners.name"),
-            @Mapping(target = "tablesName", source = "tables.name"),
+            @Mapping(target = "sourceName", source = "source.name"),
+            @Mapping(target = "ownersName", source = "owner.name"),
+            @Mapping(target = "tablesName", source = "table.name"),
             @Mapping(target = "fieldName", source = "field.fieldName"),
             @Mapping(target = "nameDomain", source = "profileResult.domain")
     })
-    ProfileResultDto profileResultDto(ProfileResult profileResult, Sources sources, Owners owners, Tables tables, Field field);
+    ProfileResultDto profileResultDto(ProfileResult profileResult, Source source, Owner owner, Table table, Field field);
 }
+
