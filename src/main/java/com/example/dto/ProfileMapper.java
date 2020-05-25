@@ -19,5 +19,17 @@ public interface ProfileMapper {
             @Mapping(target = "nameDomain", source = "profileResult.domain")
     })
     ProfileResultDto profileResultDto(ProfileResult profileResult, Source source, Owner owner, Table table, Field field);
+
+    @Mappings({
+            @Mapping( target = "id", source = "profileResultDto.profileId"),
+            @Mapping(target = "fieldId",source = "profileResult.fieldId" ),
+            @Mapping(target = "dateField",source = "profileResult.dateField" ),
+            @Mapping(target = "domain",source = "profileResultDto.nameDomain" ),
+            @Mapping(  target = "comment", source = "profileResultDto.comment"),
+
+    }
+    )
+    ProfileResult profileResult(ProfileResultDto profileResultDto, ProfileResult profileResult);
 }
+
 

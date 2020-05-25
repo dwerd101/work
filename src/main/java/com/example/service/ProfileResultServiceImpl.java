@@ -1,7 +1,9 @@
 package com.example.service;
 
 import com.example.dao.ProfileResultService;
+import com.example.dto.ProfileMapper;
 import com.example.dto.ProfileResultDto;
+import com.example.model.Field;
 import com.example.model.ProfileResult;
 import com.example.repository.ProfileResultRep;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import javax.annotation.Resource;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,8 +34,7 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     @Override
     public Page<ProfileResultDto> findBySourceIdJdbcTemplate(Long id, Pageable pageable) {
         //language=sql
-        final String FIND_BY_ID= "select  profile_result.id, sources.name, o.name, t.name, f.field_name, " +
-                "profile_result.domain\n" +
+        final String FIND_BY_ID= "select * " +
                 "from profile_result inner join field f on profile_result.field_id = f.id\n" +
                 "                join tables t on f.tables_id = t.id\n" +
                 "                join owners o on t.owner_id = o.id\n" +
@@ -52,7 +54,8 @@ public class ProfileResultServiceImpl implements ProfileResultService {
                     String tablesName = resultSet.getString(4);
                     String fieldName = resultSet.getString("field_name");
                     String nameDomain = resultSet.getString("domain") ;
-                    return new ProfileResultDto(profileId,sourceName,ownersName,tablesName,fieldName,nameDomain);
+                    String comment = resultSet.getString("comment");
+                    return new ProfileResultDto(profileId,sourceName,ownersName,tablesName,fieldName,nameDomain,comment);
                 }
         );
         int total;
@@ -81,8 +84,36 @@ public class ProfileResultServiceImpl implements ProfileResultService {
                 profileResult.getFieldId().getTableId().getOwnerId().getName(),
                 profileResult.getFieldId().getTableId().getName(),
                 profileResult.getFieldId().getFieldName(),
-                profileResult.getDomain()
+                profileResult.getDomain(),
+                profileResult.getComment()
         )).collect(Collectors.toList()), pageable, total);
     }
 
+    @Override
+    public List<ProfileResultDto> findByIdAndProfileId(Long id, Long profileId) {
+        List<ProfileResult> profileResultsList = resultRep.findById(id, profileId);
+        List<ProfileResultDto> newProfileResultDtoList =  profileResultsList.stream().map(profileResult -> new ProfileResultDto(
+                profileResult.getId(),
+                profileResult.getFieldId().getTableId().getOwnerId().getSourceId().getName(),
+                profileResult.getFieldId().getTableId().getOwnerId().getName(),
+                profileResult.getFieldId().getTableId().getName(),
+                profileResult.getFieldId().getFieldName(),
+                profileResult.getDomain(),
+                profileResult.getComment()
+
+        )).collect(Collectors.toList());
+        return newProfileResultDtoList;
+    }
+
+    @Override
+    public List<ProfileResultDto> saveProfileResult(List<ProfileResultDto> profileResultList) {
+
+        List<ProfileResult> profileResultEntityList = profileResultList.stream().map(profileResultDto -> {
+            ProfileResult profileResult = resultRep.findById(profileResultDto.getProfileId());
+           return ProfileMapper.INSTANCE.profileResult(profileResultDto, profileResult);
+
+        }).collect(Collectors.toList());
+        resultRep.saveAll(profileResultEntityList);
+        return profileResultList;
+    }
 }

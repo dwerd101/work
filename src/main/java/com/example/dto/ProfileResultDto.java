@@ -16,5 +16,6 @@ public class ProfileResultDto {
     private String tablesName;
     private String fieldName;
     private String nameDomain;
+    private String comment;
 
 }

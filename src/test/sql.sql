@@ -49,3 +49,4 @@ insert into profile_result(field_id, date_field, domain) VALUES (2,'2020-02-02',
 insert into profile_result(field_id, date_field, domain) VALUES (3,'2020-04-10','dworld.ru');
 insert into profile_result(field_id, date_field, domain) VALUES (4,'2020-04-10','dworld.ru');
 insert into table(owner_id, name) VALUES (4,'Таблица 4');
+alter table profile_result ADD comments varchar(100);

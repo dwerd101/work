@@ -33,4 +33,8 @@ public class ProfileResult {
 
     @Column(name = "domain")
     private String domain;
+
+    @Column(name = "comment")
+    private String comment;
+
 }
