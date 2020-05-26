@@ -3,7 +3,6 @@ package com.example.service;
 import com.example.dao.ProfileResultService;
 import com.example.dto.ProfileMapper;
 import com.example.dto.ProfileResultDto;
-import com.example.model.Field;
 import com.example.model.ProfileResult;
 import com.example.repository.ProfileResultRep;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,15 +10,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -76,7 +70,7 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
     @Override
     public Page<ProfileResultDto> findBySourceIdHibernate(Long id, Pageable pageable) {
-        Page<ProfileResult> profileResults = resultRep.findById(id,pageable);
+        Page<ProfileResult> profileResults = resultRep.findByIdAndReturnList(id,pageable);
         int total = profileResults.getTotalPages();
         return new PageImpl<>(profileResults.stream().map(profileResult -> new ProfileResultDto(
                 profileResult.getId(),
@@ -90,8 +84,15 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     }
 
     @Override
-    public List<ProfileResultDto> findByIdAndProfileId(Long id, Long profileId) {
-        List<ProfileResult> profileResultsList = resultRep.findById(id, profileId);
+    public List<ProfileResultDto> findByIdAndProfileId(Long id,  List<ProfileResultDto> profileId) {
+
+        List<ProfileResult> profileResultsList = new LinkedList<>();
+        for (ProfileResultDto pr: profileId
+             ) {
+            ProfileResult profileResult = resultRep.findById(id,pr.getProfileId());
+            profileResultsList.add(profileResult);
+        }
+
         List<ProfileResultDto> newProfileResultDtoList =  profileResultsList.stream().map(profileResult -> new ProfileResultDto(
                 profileResult.getId(),
                 profileResult.getFieldId().getTableId().getOwnerId().getSourceId().getName(),

@@ -35,30 +35,33 @@ public class Controller {
                                                             @RequestParam(required = false, defaultValue = "20") int size) {
 
         if (size == 0) {
-            return new ResponseEntity<>(  HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
             Pageable pageable = PageRequest.of(page, size);
             //Hibernate
-           // Page<ProfileResultDto> profileResults = profileResultService.findBySourceIdHibernate(standId,pageable);
+            // Page<ProfileResultDto> profileResults = profileResultService.findBySourceIdHibernate(standId,pageable);
             //JDBC
-            Page<ProfileResultDto> profileResults = profileResultService.findBySourceIdJdbcTemplate(standId,pageable);
+            Page<ProfileResultDto> profileResults = profileResultService.findBySourceIdJdbcTemplate(standId, pageable);
             return new ResponseEntity<>(profileResults, HttpStatus.OK);
         }
     }
 
-    @PutMapping(value = "s/{id}/p/{profileResultId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "s/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     List<ProfileResultDto> changeProfileResult(@PathVariable("id") Long standId,
-                                               @PathVariable("profileResultId") Long profileResultId,
-                                                @RequestBody List<ProfileResultDto> profileResultDto) {
-        List<ProfileResultDto> profileResultDtoList = profileResultService.findByIdAndProfileId(standId,profileResultId);
-        for(int i=0; i<profileResultDto.size(); i++) {
+                                               @RequestBody List<ProfileResultDto> profileResultDto) {
+        List<ProfileResultDto> profileResultDtoList = profileResultService.findByIdAndProfileId(standId, profileResultDto);
+        for (int i = 0; i < profileResultDto.size(); i++) {
             ProfileResultDto profileResult = profileResultDtoList.get(i);
             ProfileResultDto newProfileResult = profileResultDto.get(i);
             profileResult.setComment(newProfileResult.getComment());
-            profileResultDtoList.set(i,profileResult);
+            profileResultDtoList.set(i, profileResult);
         }
         return profileResultService.saveProfileResult(profileResultDtoList);
     }
-
-
 }
+    //Фильтры
+    /*Тест изменить одну запись, несколько.
+
+    @GetMapping("")
+*/
+
