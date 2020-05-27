@@ -4,11 +4,14 @@ import com.example.dao.ProfileResultService;
 import com.example.dto.ProfileMapper;
 import com.example.dto.ProfileResultDto;
 import com.example.model.ProfileResult;
+import com.example.model.ProfileResultView;
 import com.example.repository.ProfileResultRep;
+import com.example.repository.ProfileResultViewRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +26,12 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
     private ProfileResultRep resultRep;
     private JdbcTemplate jdbcTemplate;
+    private ProfileResultViewRep resultViewRep;
 
+    @Autowired
+    public void setResultViewRep(ProfileResultViewRep resultViewRep) {
+        this.resultViewRep = resultViewRep;
+    }
 
     @Override
     public Page<ProfileResultDto> findBySourceIdJdbcTemplate(Long id, Pageable pageable) {
@@ -108,7 +116,6 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
     @Override
     public List<ProfileResultDto> saveProfileResult(List<ProfileResultDto> profileResultList) {
-
         List<ProfileResult> profileResultEntityList = profileResultList.stream().map(profileResultDto -> {
             ProfileResult profileResult = resultRep.findById(profileResultDto.getProfileId());
            return ProfileMapper.INSTANCE.profileResult(profileResultDto, profileResult);
@@ -116,5 +123,10 @@ public class ProfileResultServiceImpl implements ProfileResultService {
         }).collect(Collectors.toList());
         resultRep.saveAll(profileResultEntityList);
         return profileResultList;
+    }
+
+    @Override
+    public List<ProfileResultView> findAll(Specification<ProfileResultView> profileResult) {
+        return resultViewRep.findAll(profileResult);
     }
 }

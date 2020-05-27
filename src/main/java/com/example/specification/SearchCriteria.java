@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @NoArgsConstructor
 public class SearchCriteria {
-    private String key;
+/*    private String key;
     private SearchOperation operation;
     private Object value;
     private boolean orPredicate;
@@ -38,7 +38,7 @@ public class SearchCriteria {
                 final boolean startWithAsterisk = prefix != null && prefix.contains(SearchOperation.ZERO_OR_MORE_REGEX);
                 final boolean endWithAsterisk = suffix != null && suffix.contains(SearchOperation.ZERO_OR_MORE_REGEX);
 
-                if (startWithAsterisk && endWithAsterisk) {
+                if (startWithAsterisk &&  endWithAsterisk) {
                     op = SearchOperation.CONTAINS;
                 } else if (startWithAsterisk) {
                     op = SearchOperation.ENDS_WITH;
@@ -50,6 +50,6 @@ public class SearchCriteria {
         this.key = key;
         this.operation = op;
         this.value = value;
-    }
+    }*/
 
 }

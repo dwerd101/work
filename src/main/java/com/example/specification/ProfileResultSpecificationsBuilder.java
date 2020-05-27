@@ -1,14 +1,14 @@
 package com.example.specification;
 
 import com.example.model.ProfileResult;
+import com.example.model.ProfileResultView;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ProfileResultSpecificationsBuilder {
-    private final List<SearchCriteria> params;
+   /* private final List<SearchCriteria> params;
 
     public ProfileResultSpecificationsBuilder() {
         params = new ArrayList<>();
@@ -16,11 +16,14 @@ public class ProfileResultSpecificationsBuilder {
 
     // API
 
-    public final ProfileResultSpecificationsBuilder with(final String key, final String operation, final Object value, final String prefix, final String suffix) {
+    public final ProfileResultSpecificationsBuilder with(final String key, final String operation,
+                                                         final Object value, final String prefix, final String suffix) {
         return with(null, key, operation, value, prefix, suffix);
     }
 
-    public final ProfileResultSpecificationsBuilder with(final String orPredicate, final String key, final String operation, final Object value, final String prefix, final String suffix) {
+    public final ProfileResultSpecificationsBuilder with(final String orPredicate, final String key,
+                                                         final String operation, final Object value, final String prefix,
+                                                         final String suffix) {
         SearchOperation op = SearchOperation.getSimpleOperation(operation.charAt(0));
         if (op != null) {
             if (op == SearchOperation.EQUALITY) { // the operation may be complex operation
@@ -40,11 +43,11 @@ public class ProfileResultSpecificationsBuilder {
         return this;
     }
 
-    public Specification<ProfileResult> build() {
-        if (params.size() == 0)
+    public Specification<ProfileResultView> build() {
+       if (params.size() == 0)
             return null;
 
-        Specification<ProfileResult> result = new ProfileResultSpecification(params.get(0));
+        Specification<ProfileResultView> result = new ProfileResultSpecification(params.get(0));
 
         for (int i = 1; i < params.size(); i++) {
             result = params.get(i).isOrPredicate()
@@ -63,6 +66,6 @@ public class ProfileResultSpecificationsBuilder {
     public final ProfileResultSpecificationsBuilder with(SearchCriteria criteria) {
         params.add(criteria);
         return this;
-    }
+    }*/
 }
 

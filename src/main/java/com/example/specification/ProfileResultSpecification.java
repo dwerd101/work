@@ -1,7 +1,7 @@
 package com.example.specification;
 
 import com.example.model.ProfileResult;
-import lombok.AllArgsConstructor;
+import com.example.model.ProfileResultView;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +16,8 @@ import javax.persistence.criteria.Root;
 @Component
 @Data
 @NoArgsConstructor
-public class ProfileResultSpecification implements Specification<ProfileResult> {
-
+public class ProfileResultSpecification  {
+/*
     private SearchCriteria criteria;
     public ProfileResultSpecification(final SearchCriteria criteria) {
         super();
@@ -26,7 +26,7 @@ public class ProfileResultSpecification implements Specification<ProfileResult> 
 
 
     @Override
-    public Predicate toPredicate(Root<ProfileResult> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+    public Predicate toPredicate(Root<ProfileResultView> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         switch (criteria.getOperation()) {
             case EQUALITY:
                 return criteriaBuilder.equal(root.get(criteria.getKey()), criteria.getValue());
@@ -52,5 +52,5 @@ public class ProfileResultSpecification implements Specification<ProfileResult> 
     @Autowired
     public void setCriteria(SearchCriteria criteria) {
         this.criteria = criteria;
-    }
+    }*/
 }

@@ -1,0 +1,26 @@
+package com.example.specification;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@Getter
+@NoArgsConstructor
+@Data
+@AllArgsConstructor
+public class SearchCriteria2 {
+    private String key;
+    private String operation;
+    private Object value;
+    private boolean orPredicate;
+
+
+    public SearchCriteria2(String key, String operation, Object value) {
+        this.key = key;
+        this.operation = operation;
+        this.value = value;
+    }
+}
