@@ -5,14 +5,13 @@ import com.example.dto.ProfileMapper;
 import com.example.dto.ProfileResultDto;
 import com.example.model.ProfileResult;
 import com.example.model.ProfileResultView;
+import com.example.repository.ProfileResultDaoRep;
 import com.example.repository.ProfileResultRep;
-import com.example.repository.ProfileResultViewRep;
-import com.querydsl.core.types.dsl.BooleanExpression;
+import com.example.specification.SearchCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -27,12 +26,9 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
     private ProfileResultRep resultRep;
     private JdbcTemplate jdbcTemplate;
-    private ProfileResultViewRep resultViewRep;
+    private ProfileResultDaoRep profileResultDaoRep;
 
-    @Autowired
-    public void setResultViewRep(ProfileResultViewRep resultViewRep) {
-        this.resultViewRep = resultViewRep;
-    }
+
 
     @Override
     public Page<ProfileResultDto> findBySourceIdJdbcTemplate(Long id, Pageable pageable) {
@@ -75,6 +71,11 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @Autowired
+    public void setProfileResultDaoRep(ProfileResultDaoRep profileResultDaoRep) {
+        this.profileResultDaoRep = profileResultDaoRep;
     }
 
     @Override
@@ -127,7 +128,7 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     }
 
     @Override
-    public Iterable<ProfileResultView> findAll(BooleanExpression booleanExpression) {
-        return  resultViewRep.findAll(booleanExpression);
+    public List<ProfileResultView> searchProfile(List<SearchCriteria> params) {
+        return profileResultDaoRep.searchProfile(params);
     }
 }
