@@ -7,6 +7,7 @@ import com.example.model.ProfileResult;
 import com.example.model.ProfileResultView;
 import com.example.repository.ProfileResultRep;
 import com.example.repository.ProfileResultViewRep;
+import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -126,7 +127,7 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     }
 
     @Override
-    public List<ProfileResultView> findAll(Specification<ProfileResultView> profileResult) {
-        return resultViewRep.findAll(profileResult);
+    public Iterable<ProfileResultView> findAll(BooleanExpression booleanExpression) {
+        return  resultViewRep.findAll(booleanExpression);
     }
 }

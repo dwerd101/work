@@ -6,11 +6,12 @@ import com.example.dto.ProfileResultDto;
 
 import com.example.model.ProfileResult;
 import com.example.model.ProfileResultView;
-import com.example.specification.ProfileResultSpecification;
-import com.example.specification.ProfileResultSpecificationBuilder2;
-import com.example.specification.ProfileResultSpecificationsBuilder;
-import com.example.specification.SearchOperation;
+import com.example.repository.ProfileResultDao;
+import com.example.repository.ProfileResultViewRep;
+import com.example.specification.*;
 import com.google.common.base.Joiner;
+import com.querydsl.core.types.dsl.BooleanExpression;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -21,6 +22,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,8 +31,12 @@ import java.util.regex.Pattern;
 @RestController
 public class Controller {
 
-    private ProfileResultService profileResultService;
+    @Autowired
+    private ProfileResultDao services;
 
+    private ProfileResultService profileResultService;
+    @Autowired
+    private ProfileResultViewRep resultViewRep;
 
     public Controller(ProfileResultService profileResultService) {
         this.profileResultService = profileResultService;
@@ -67,15 +73,31 @@ public class Controller {
     }
 
     @GetMapping("source")
-    List<ProfileResultView> search(@RequestParam(value = "search") String search) {
+   public List<ProfileResultView> search(@RequestParam(value = "search") String search) {
 
-        ProfileResultSpecificationBuilder2 builder = new ProfileResultSpecificationBuilder2();
+
+        List<SearchCriteria2> params = new ArrayList<>();
+        if (search != null) {
+            Pattern pattern = Pattern.compile("(\\w+?)([:<>])(\\w+?|.*?),", Pattern.UNICODE_CHARACTER_CLASS);
+            Matcher matcher = pattern.matcher(search + ",");
+            while (matcher.find()) {
+                params.add(new SearchCriteria2(matcher.group(1), matcher.group(2), matcher.group(3)));
+            }
+        }
+        return services.searchProfile(params);
+
+
+  // /ssource/id
+
+        // Отдааю серверу питон Затем получаю ти отправлюя к  себеб
+
+      /*  ProfileResultSpecificationBuilder2 builder = new ProfileResultSpecificationBuilder2();
         Pattern pattern = Pattern.compile("(\\w+?)(:|<|>)(\\w+?|.*?),", Pattern.UNICODE_CHARACTER_CLASS);
       //  if(!search.contains(".")) {
             Matcher matcher = pattern.matcher(search + ",");
             while (matcher.find()) {
                 builder.with(matcher.group(1), matcher.group(2), matcher.group(3));
-            }
+            }*/
         //}
        /* else{
         //    String text = search.replaceAll(".*?search=","");
@@ -85,8 +107,8 @@ public class Controller {
                 builder.with(matcher.group(1), matcher.group(2), matcher.group(3));
             }
         }*/
-        Specification<ProfileResultView> spec = builder.build();
-        return profileResultService.findAll(spec);
+    /*    BooleanExpression spec = builder.build();
+        return  resultViewRep.findAll(spec);*/
 
       /* ProfileResultSpecificationsBuilder builder = new ProfileResultSpecificationsBuilder();
         String operationSetExper = Joiner.on("|")

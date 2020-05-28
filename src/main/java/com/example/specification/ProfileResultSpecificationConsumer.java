@@ -11,38 +11,38 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.util.function.Consumer;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
-public class ProfileResultSpecificationConsumer  implements Specification<ProfileResultView> {
-    private SearchCriteria2 criteria;
+public class ProfileResultSpecificationConsumer  implements Consumer<SearchCriteria2> {
 
+
+    private Predicate predicate;
+    private CriteriaBuilder builder;
+    private Root r;
+
+    public ProfileResultSpecificationConsumer(Predicate predicate, CriteriaBuilder builder, Root r) {
+        this.predicate = predicate;
+        this.builder = builder;
+        this.r = r;
+    }
 
     @Override
-    public Predicate toPredicate(Root<ProfileResultView> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
-
-        if (criteria.getOperation().equalsIgnoreCase(">")) {
-            return builder.greaterThanOrEqualTo(
-                    root.<String> get(criteria.getKey()), criteria.getValue().toString());
-        }
-        else if (criteria.getOperation().equalsIgnoreCase("<")) {
-            return builder.lessThanOrEqualTo(
-                    root.<String> get(criteria.getKey()), criteria.getValue().toString());
-        }
-        else if (criteria.getOperation().equalsIgnoreCase(":")) {
-            if (root.get(criteria.getKey()).getJavaType() == String.class) {
-                return builder.like(
-                        root.<String>get(criteria.getKey()), "%" + criteria.getValue() + "%");
+    public void accept(SearchCriteria2 param) {
+        if (param.getOperation().equalsIgnoreCase(">")) {
+            predicate = builder.and(predicate, builder.greaterThanOrEqualTo(r.get(param.getKey()), param.getValue().toString()));
+        } else if (param.getOperation().equalsIgnoreCase("<")) {
+            predicate = builder.and(predicate, builder.lessThanOrEqualTo(r.get(param.getKey()), param.getValue().toString()));
+        } else if (param.getOperation().equalsIgnoreCase(":")) {
+            if (r.get(param.getKey()).getJavaType() == String.class) {
+                predicate = builder.and(predicate, builder.like(r.get(param.getKey()), "%" + param.getValue() + "%"));
             } else {
-                return builder.equal(root.get(criteria.getKey()), criteria.getValue());
+                predicate = builder.and(predicate, builder.equal(r.get(param.getKey()), param.getValue()));
             }
         }
-        return null;
     }
 
-    @Autowired
-    public void setCriteria(SearchCriteria2 criteria) {
-        this.criteria = criteria;
-    }
+
+
 }
