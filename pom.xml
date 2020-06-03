@@ -18,9 +18,24 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<logstash.host>logstashcsm.example.ru</logstash.host>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -58,11 +73,27 @@
 	</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
 
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor -->
@@ -146,6 +177,24 @@
 
 	</build>
 
+	<profiles>
+	<profile>
+		<id>local</id>
+		<properties>
+			<logstash.port>10000</logstash.port>
+			<logger.console.tresholdFilter>ALL</logger.console.tresholdFilter>
+			<logger.socket.tresholdFilter>OFF</logger.socket.tresholdFilter>
+		</properties>
+	</profile>
 
+	<profile>
+		<id>dev</id>
+		<properties>
+			<logstash.port>10001</logstash.port>
+			<logger.console.tresholdFilter>OFF</logger.console.tresholdFilter>
+			<logger.socket.tresholdFilter>ALL</logger.socket.tresholdFilter>
+		</properties>
+	</profile>
+</profiles>
 
 </project>

@@ -58,3 +58,5 @@ from profile_result inner join field  on profile_result.field_id = field.id
                     join tables  on field.tables_id = tables.id
                     join owners  on tables.owner_id = owners.id
                     join sources  on owners.source_id = sources.id
+
+                    alter table field rename column tables_id to table_id

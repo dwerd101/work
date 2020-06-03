@@ -35,9 +35,9 @@ public class ProfileResultServiceImpl implements ProfileResultService {
         //language=sql
         final String FIND_BY_ID= "select * " +
                 "from profile_result inner join field f on profile_result.field_id = f.id\n" +
-                "                join tables t on f.tables_id = t.id\n" +
-                "                join owners o on t.owner_id = o.id\n" +
-                "                join sources sources on o.source_id = sources.id\n" +
+                "                join public.table  t on f.table_id = t.id\n" +
+                "                join owner o on t.owner_id = o.id\n" +
+                "                join source sources on o.source_id = sources.id\n" +
                 "where sources.id=?"+
                 "LIMIT " + pageable.getPageSize() + " " +
                 "OFFSET " + pageable.getOffset();

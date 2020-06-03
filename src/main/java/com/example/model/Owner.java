@@ -13,7 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@javax.persistence.Table(name = "owners")
+@javax.persistence.Table(name = "owner")
 public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

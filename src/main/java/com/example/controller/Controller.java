@@ -6,6 +6,7 @@ import com.example.dto.ProfileResultDto;
 
 import com.example.model.ProfileResultView;
 import com.example.specification.*;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -22,6 +23,7 @@ import java.util.regex.Pattern;
 
 
 @RestController
+@Log4j2
 public class Controller {
 
 

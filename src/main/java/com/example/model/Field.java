@@ -36,7 +36,7 @@ public class Field {
     private String type;
 
     @ManyToOne
-    @JoinColumn(name = "tables_id", referencedColumnName = "id")
+    @JoinColumn(name = "table_id", referencedColumnName = "id")
    // @JsonProperty("table_id")
     @ToString.Exclude  private Table tableId;
 
