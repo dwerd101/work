@@ -4,6 +4,7 @@ import com.example.dao.ProfileResultService;
 import com.example.dto.ProfileResultDto;
 
 
+import com.example.log.LoggingMethod;
 import com.example.model.ProfileResultView;
 import com.example.specification.*;
 import lombok.extern.log4j.Log4j2;
@@ -51,6 +52,7 @@ public class Controller {
         }
     }
 
+    @LoggingMethod
     @PutMapping(value = "s/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     List<ProfileResultDto> changeProfileResult(@PathVariable("id") Long standId,
                                                @RequestBody List<ProfileResultDto> profileResultDto) {

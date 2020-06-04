@@ -22,10 +22,10 @@ import java.util.stream.Collectors;
 @Component
 @Log4j2
 public class Logging {
-    @Pointcut("execution(public * com.example.service.*.*(..))")
+    @Pointcut("")
     public void callAtMyServicePublic() { }
 
-    @Before("callAtMyServicePublic()")
+    @Before("@annotation(LoggingMethod)")
     public void beforeCallAtMethod1(JoinPoint jp) {
         StringBuilder message  = new StringBuilder("Method(): ");
         message.append(jp.getSignature().getName()).append(" ! ");
