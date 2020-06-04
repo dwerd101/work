@@ -12,7 +12,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@javax.persistence.Table(name = "sources")
+@javax.persistence.Table(name = "source")
 public class Source {
 
     @Id

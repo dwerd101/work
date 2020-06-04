@@ -4,7 +4,10 @@ import com.example.dao.ProfileResultService;
 import com.example.dto.ProfileMapper;
 import com.example.dto.ProfileResultDto;
 import com.example.model.ProfileResult;
+import com.example.model.ProfileResultView;
+import com.example.repository.ProfileResultDaoRep;
 import com.example.repository.ProfileResultRep;
+import com.example.specification.SearchCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -23,6 +26,8 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
     private ProfileResultRep resultRep;
     private JdbcTemplate jdbcTemplate;
+    private ProfileResultDaoRep profileResultDaoRep;
+
 
 
     @Override
@@ -30,9 +35,9 @@ public class ProfileResultServiceImpl implements ProfileResultService {
         //language=sql
         final String FIND_BY_ID= "select * " +
                 "from profile_result inner join field f on profile_result.field_id = f.id\n" +
-                "                join tables t on f.tables_id = t.id\n" +
-                "                join owners o on t.owner_id = o.id\n" +
-                "                join sources sources on o.source_id = sources.id\n" +
+                "                join public.table  t on f.table_id = t.id\n" +
+                "                join owner o on t.owner_id = o.id\n" +
+                "                join source sources on o.source_id = sources.id\n" +
                 "where sources.id=?"+
                 "LIMIT " + pageable.getPageSize() + " " +
                 "OFFSET " + pageable.getOffset();
@@ -66,6 +71,11 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @Autowired
+    public void setProfileResultDaoRep(ProfileResultDaoRep profileResultDaoRep) {
+        this.profileResultDaoRep = profileResultDaoRep;
     }
 
     @Override
@@ -108,7 +118,6 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
     @Override
     public List<ProfileResultDto> saveProfileResult(List<ProfileResultDto> profileResultList) {
-
         List<ProfileResult> profileResultEntityList = profileResultList.stream().map(profileResultDto -> {
             ProfileResult profileResult = resultRep.findById(profileResultDto.getProfileId());
            return ProfileMapper.INSTANCE.profileResult(profileResultDto, profileResult);
@@ -116,5 +125,10 @@ public class ProfileResultServiceImpl implements ProfileResultService {
         }).collect(Collectors.toList());
         resultRep.saveAll(profileResultEntityList);
         return profileResultList;
+    }
+
+    @Override
+    public List<ProfileResultView> searchProfile(List<SearchCriteria> params) {
+        return profileResultDaoRep.searchProfile(params);
     }
 }

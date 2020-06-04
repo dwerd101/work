@@ -50,3 +50,13 @@ insert into profile_result(field_id, date_field, domain) VALUES (3,'2020-04-10',
 insert into profile_result(field_id, date_field, domain) VALUES (4,'2020-04-10','dworld.ru');
 insert into table(owner_id, name) VALUES (4,'Таблица 4');
 alter table profile_result ADD comments varchar(100);
+
+create view profile_result_view as
+select  profile_result.id, sources.name as sources_name, owners.name as owners_name,
+       tables.name as tables_name, field.field_name as field_name, profile_result.domain, profile_result.comment
+from profile_result inner join field  on profile_result.field_id = field.id
+                    join tables  on field.tables_id = tables.id
+                    join owners  on tables.owner_id = owners.id
+                    join sources  on owners.source_id = sources.id
+
+                    alter table field rename column tables_id to table_id
