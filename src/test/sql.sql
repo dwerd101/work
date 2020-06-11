@@ -47,8 +47,8 @@ insert into field(field_name, size, type, tables_id) VALUES ('Поле 3', '30',
 insert into profile_result(field_id, date_field, domain) VALUES (1,'2020-01-20','hello.world.ru');
 insert into profile_result(field_id, date_field, domain) VALUES (2,'2020-02-02','company.ru');
 insert into profile_result(field_id, date_field, domain) VALUES (3,'2020-04-10','dworld.ru');
-insert into profile_result(field_id, date_field, domain) VALUES (4,'2020-04-10','dworld.ru');
-insert into table(owner_id, name) VALUES (4,'Таблица 4');
+/*insert into profile_result(field_id, date_field, domain) VALUES (4,'2020-04-10','dworld.ru');
+insert into table(owner_id, name) VALUES (4,'Таблица 4');*/
 alter table profile_result ADD comments varchar(100);
 
 create view profile_result_view as
@@ -60,3 +60,22 @@ from profile_result inner join field  on profile_result.field_id = field.id
                     join sources  on owners.source_id = sources.id
 
                     alter table field rename column tables_id to table_id
+
+                    alter table profile_result add column  profile_task_id int;
+alter table profile_result add constraint profile_task_id
+foreign key (profile_task_id) references profile_task(id)
+
+create view profile_result_view as
+
+/* select *
+     from profile_result inner join field f on profile_result.field_id = f.id
+                join public.table t on f.table_id = t.id
+                join owner o on t.owner_id = o.id
+                join source s on o.source_id = s.id
+                join profile_task p on profile_result.profile_task_id=p.id*/
+
+
+    create view find_task_id_by_profile_result
+as
+    select profile_result.id as prof_id, field_id, date_field, domain, comment, profile_task_id, profile_task.id as task_id, source_id, create_date, update_date, status
+    from profile_result inner join profile_task on profile_task.id=profile_result.id;

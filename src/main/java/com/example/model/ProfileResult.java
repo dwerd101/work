@@ -37,4 +37,9 @@ public class ProfileResult {
     @Column(name = "comment")
     private String comment;
 
+    @ManyToOne
+    @JoinColumn(name = "profile_task_id", referencedColumnName = "id")
+    @ToString.Exclude
+    private ProfileTask profileTaskId;
+
 }

@@ -35,7 +35,7 @@ public class Controller {
         this.profileResultService = profileResultService;
     }
 
-    @GetMapping(value = "source/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "task/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<Page<ProfileResultDto>> getProfileResult(@PathVariable("id") Long standId,
                                                             @RequestParam(required = false, defaultValue = "0") int page,
                                                             @RequestParam(required = false, defaultValue = "20") int size) {
@@ -47,13 +47,13 @@ public class Controller {
             //Hibernate
             // Page<ProfileResultDto> profileResults = profileResultService.findBySourceIdHibernate(standId,pageable);
             //JDBC
-            Page<ProfileResultDto> profileResults = profileResultService.findBySourceIdJdbcTemplate(standId, pageable);
+            Page<ProfileResultDto> profileResults = profileResultService.findByTaskIdHibernate(standId,pageable);
             return new ResponseEntity<>(profileResults, HttpStatus.OK);
         }
     }
 
     @LoggingMethod
-    @PutMapping(value = "s/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "task/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     List<ProfileResultDto> changeProfileResult(@PathVariable("id") Long standId,
                                                @RequestBody List<ProfileResultDto> profileResultDto) {
         List<ProfileResultDto> profileResultDtoList = profileResultService.findByIdAndProfileId(standId, profileResultDto);
@@ -80,6 +80,16 @@ public class Controller {
 
         
     }
+    /*
+    *  Переделаю метод который был во 2 приложении
+    *  Изменить параметр запроса sourceid source/{id} на ProfileTaskId меняю на task/{id}
+    *  s/{id} на task/{id}
+    *  Добавить в ProfileResult столбец taskId и его заполнять
+    *  Создать html страницу и отобразить таблицу.
+    *  На странице список source
+    *  ProfileResultView 2 страница.
+    *
+    * */
 }
 
 

@@ -26,7 +26,7 @@ public class ProfileResultConsumer implements Consumer<SearchCriteria> {
     @Override
     public void accept(SearchCriteria param) {
         if (param.getOperation().equalsIgnoreCase(">")) {
-            predicate = builder.and(predicate, builder.greaterThan(r.get(param.getKey()), param.getValue().toString()));
+            predicate = builder.and(predicate, builder.greaterThanOrEqualTo(r.get(param.getKey()), param.getValue().toString()));
         } else if (param.getOperation().equalsIgnoreCase("<")) {
             predicate = builder.and(predicate, builder.lessThan(r.get(param.getKey()), param.getValue().toString()));
         } else if (param.getOperation().equalsIgnoreCase(":")) {

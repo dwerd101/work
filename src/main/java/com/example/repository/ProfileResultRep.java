@@ -16,19 +16,35 @@ import java.util.List;
 @Repository("profileRep")
 public interface ProfileResultRep extends JpaRepository<ProfileResult, Long>{
     @Query( nativeQuery = true,
-            value = "select *" +
-                    "from profile_result inner join field f on profile_result.field_id = f.id\n" +
-                    "    join public.table t on f.table_id = t.id\n" +
-                    "    join owners o on t.owner_id = o.id\n" +
-                    "    join sources s on o.source_id = s.id\n" +
-                    "where s.id=?1",
-    countQuery = "select COUNT(1)" +
-            "from profile_result inner join field f on profile_result.field_id = f.id\n" +
-            "    join public.table t on f.table_id = t.id\n" +
-            "    join owners o on t.owner_id = o.id\n" +
-            "    join sources s on o.source_id = s.id\n" +
-            "where s.id=?1")
+            value = "select *\n" +
+                    "     from profile_result inner join field f on profile_result.field_id = f.id\n" +
+                    "                join public.table t on f.table_id = t.id\n" +
+                    "                join owner o on t.owner_id = o.id\n" +
+                    "                join source s on o.source_id = s.id\n" +
+                    "                join profile_task p on profile_result.profile_task_id=p.id\n" +
+                    "            where profile_result.profile_task_id=?1" ,
+    countQuery = "select count(1)\n" +
+            "     from profile_result inner join field f on profile_result.field_id = f.id\n" +
+            "                join public.table t on f.table_id = t.id\n" +
+            "                join owner o on t.owner_id = o.id\n" +
+            "                join source s on o.source_id = s.id\n" +
+            "                join profile_task p on profile_result.profile_task_id=p.id\n" +
+            "            where profile_result.profile_task_id=?1" )
     Page<ProfileResult> findByIdAndReturnList(Long id, Pageable pageable);
+
+
+
+    @Query(nativeQuery = true,
+                    value = "select prof_id, field_id, date_field, domain, comment, profile_task_id \n" +
+                            "from  find_task_id_by_profile_result\n" +
+                            "where profile_task_id=?1",
+                    countQuery = "select count(1)\n" +
+                            "from  find_task_id_by_profile_result\n" +
+                            "where profile_task_id=?1")
+    Page<ProfileResult> findByProfileTaskId(Long id, Pageable pageable);
+
+
+
 
     @Query(nativeQuery = true, value = "select  profile_result.id,  profile_result.field_id," +
             " profile_result.date_field, " +
@@ -51,6 +67,17 @@ public interface ProfileResultRep extends JpaRepository<ProfileResult, Long>{
     ProfileResult findById(long id, long profileId);
 
     ProfileResult findById(long id);
+
+    @Query(nativeQuery = true,
+            value = "select *" +
+                    "from profile_result inner join field f on profile_result.field_id = f.id\n" +
+                    "    join tables t on f.tables_id = t.id\n" +
+                    "    join owners o on t.owner_id = o.id\n" +
+                    "    join sources s on o.source_id = s.id\n" +
+                    "where s.id=?1")
+    List<ProfileResult> findByIdSource(Long id);
+
+
 
 
 
