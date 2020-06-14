@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@javax.persistence.Table(name = "table")
+@javax.persistence.Table(name = "tables")
 public class Table {
 
     @Id

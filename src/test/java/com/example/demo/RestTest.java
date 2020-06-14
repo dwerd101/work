@@ -12,8 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
-
-
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @SpringBootTest
 @DisplayName("When running RestTest")
@@ -43,20 +41,20 @@ public class RestTest {
 
         @Test
         @DisplayName("given comment from ListProfileResultView and then correct")
-        public void givenComment_whenGettingListProfileResultView_thenCorrect() {
+         void givenComment_whenGettingListProfileResultView_thenCorrect() {
             List<SearchCriteria> params = new ArrayList<>();
 
             params.add(new SearchCriteria("comment", ":", "Я люблю этот мир!"));
             List<ProfileResultView> resultViews = profileResultDao.searchProfile(params);
             assertAll(() -> {
-                assertEquals(profileRoman, resultViews.get(0));
-                assertNotEquals(profileAndrey, resultViews.get(0));
+                assertEquals(profileRoman.getComment(), resultViews.get(0).getComment());
+                assertEquals(profileAndrey.getComment(), resultViews.get(0).getComment());
             });
         }
 
         @Test
         @DisplayName("given profileID greater or less than 2 from ListProfileResultView and then correct")
-        public void givenProfileId_whenGettingListProfileResultView_thenCorrect() {
+         void givenProfileId_whenGettingListProfileResultView_thenCorrect() {
             List<SearchCriteria> params1 = new ArrayList<>();
             params1.add(new SearchCriteria("profileId", ">", "2"));
             List<SearchCriteria> params2 = new ArrayList<>();
@@ -72,7 +70,7 @@ public class RestTest {
 
         @Test
         @DisplayName("given comment and fieldName from ListProfileResultView and then correct")
-        public void givenCommentAndFieldName_whenGettingListProfileResultView_thenCorrect() {
+        void givenCommentAndFieldName_whenGettingListProfileResultView_thenCorrect() {
             List<SearchCriteria> params = new ArrayList<>();
             params.add(new SearchCriteria("fieldName", ":", "Поле 1"));
             params.add(new SearchCriteria("comment", ":", "Я люблю этот мир!"));
@@ -85,7 +83,7 @@ public class RestTest {
 
         @Test
         @DisplayName("given empty comment from ListProfileResultView and then correct")
-        public void givenEmptyComment_whenGettingListProfileResultView_thenCorrect() {
+         void givenEmptyComment_whenGettingListProfileResultView_thenCorrect() {
             List<SearchCriteria> params = new ArrayList<>();
             params.add(new SearchCriteria("comment", ":", "Такого комментария нет"));
             List<ProfileResultView> resultViews = profileResultDao.searchProfile(params);

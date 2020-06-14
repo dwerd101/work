@@ -17,6 +17,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "profile_result_view")
+@Immutable
 public class ProfileResultView implements Serializable {
 
     private static final long serialVersionUID = 1L;

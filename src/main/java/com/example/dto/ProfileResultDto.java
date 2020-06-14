@@ -18,5 +18,4 @@ public class ProfileResultDto {
     private String fieldName;
     private String nameDomain;
     private String comment;
-
 }
