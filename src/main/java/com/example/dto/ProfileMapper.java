@@ -26,7 +26,7 @@ public interface ProfileMapper {
             @Mapping(target = "dateField",source = "profileResult.dateField" ),
             @Mapping(target = "domain",source = "profileResultDto.nameDomain" ),
             @Mapping(  target = "comment", source = "profileResultDto.comment"),
-
+            @Mapping(target = "profileTaskId", source = "profileResult.profileTaskId")
     }
     )
     ProfileResult profileResult(ProfileResultDto profileResultDto, ProfileResult profileResult);
