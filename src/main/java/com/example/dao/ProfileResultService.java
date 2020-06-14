@@ -3,6 +3,7 @@ package com.example.dao;
 import com.example.dto.ProfileResultDto;
 
 import com.example.model.ProfileResult;
+import com.example.model.ProfileResultAndProfileTaskView;
 import com.example.model.ProfileResultView;
 import com.example.specification.SearchCriteria;
 import org.springframework.data.domain.Page;
@@ -19,6 +20,7 @@ public interface ProfileResultService {
     List<ProfileResultDto> saveProfileResult(List<ProfileResultDto> profileResult);
     List<ProfileResultView> searchProfile(List<SearchCriteria> params);
     List<ProfileResultDto> findByIdSource(Long id);
+    List<ProfileResultDto> findByTaskIdAndProfileId(Long taskId, List<ProfileResultDto> profileId);
 
 
 }

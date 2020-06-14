@@ -4,7 +4,9 @@ import com.example.dao.ProfileResultService;
 import com.example.dto.ProfileMapper;
 import com.example.dto.ProfileResultDto;
 import com.example.model.ProfileResult;
+import com.example.model.ProfileResultAndProfileTaskView;
 import com.example.model.ProfileResultView;
+import com.example.repository.ProfileResultAndProfileTaskRep;
 import com.example.repository.ProfileResultDaoRep;
 import com.example.repository.ProfileResultRep;
 import com.example.specification.SearchCriteria;
@@ -27,14 +29,20 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     private ProfileResultRep resultRep;
     private JdbcTemplate jdbcTemplate;
     private ProfileResultDaoRep profileResultDaoRep;
+    private ProfileResultAndProfileTaskRep profileResultAndProfileTaskRep;
 
 
     @Override
     public Page<ProfileResultDto> findByTaskIdHibernate(Long id, Pageable pageable) {
-        Page<ProfileResult> profileResults = resultRep.findByProfileTaskId(id, pageable);
-        int total = profileResults.getTotalPages();
+        Page<ProfileResultAndProfileTaskView> profileResultAndProfileTaskViewList =  profileResultAndProfileTaskRep.findByProfileTaskId(id, pageable);
+        int total = profileResultAndProfileTaskViewList.getTotalPages();
+        List<ProfileResultAndProfileTaskView> profileTaskViews = profileResultAndProfileTaskViewList.getContent();
+        List<ProfileResult> profileResultList = profileTaskViews.stream().map(profileResultAndProfileTaskView -> {
+            ProfileResult profileResult = resultRep.findById(profileResultAndProfileTaskView.getProfId());
+            return profileResult;
+        }).collect(Collectors.toList());
 
-        return new PageImpl<>(profileResults.stream().map(profileResult -> new ProfileResultDto(
+        return new PageImpl<>(profileResultList.stream().map(profileResult -> new ProfileResultDto(
                 profileResult.getId(),
                 profileResult.getFieldId().getTableId().getOwnerId().getSourceId().getName(),
                 profileResult.getFieldId().getTableId().getOwnerId().getName(),
@@ -93,6 +101,11 @@ public class ProfileResultServiceImpl implements ProfileResultService {
         this.profileResultDaoRep = profileResultDaoRep;
     }
 
+    @Autowired
+    public void setProfileResultAndProfileTaskRep(ProfileResultAndProfileTaskRep profileResultAndProfileTaskRep) {
+        this.profileResultAndProfileTaskRep = profileResultAndProfileTaskRep;
+    }
+
     @Override
     public Page<ProfileResultDto> findBySourceIdHibernate(Long id, Pageable pageable) {
         Page<ProfileResult> profileResults = resultRep.findByIdAndReturnList(id, pageable);
@@ -129,6 +142,28 @@ public class ProfileResultServiceImpl implements ProfileResultService {
 
         )).collect(Collectors.toList());
         return newProfileResultDtoList;
+    }
+
+    @Override
+    public List<ProfileResultDto> findByTaskIdAndProfileId(Long taskId, List<ProfileResultDto> profileId) {
+        List<ProfileResult> profileResultsList = new LinkedList<>();
+        for (ProfileResultDto pr : profileId
+        ) {
+
+            ProfileResult profileResult = resultRep.findByTaskIdAndProfileId(taskId, pr.getProfileId());
+            profileResultsList.add(profileResult);
+        }
+
+        return profileResultsList.stream().map(profileResult -> new ProfileResultDto(
+                profileResult.getId(),
+                profileResult.getFieldId().getTableId().getOwnerId().getSourceId().getName(),
+                profileResult.getFieldId().getTableId().getOwnerId().getName(),
+                profileResult.getFieldId().getTableId().getName(),
+                profileResult.getFieldId().getFieldName(),
+                profileResult.getDomain(),
+                profileResult.getComment()
+
+        )).collect(Collectors.toList());
     }
 
     @Override

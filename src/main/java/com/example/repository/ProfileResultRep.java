@@ -1,17 +1,15 @@
 package com.example.repository;
 
-import com.example.dto.ProfileResultDto;
 import com.example.model.ProfileResult;
 
-import com.example.model.ProfileResultView;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository("profileRep")
 public interface ProfileResultRep extends JpaRepository<ProfileResult, Long>{
@@ -31,18 +29,6 @@ public interface ProfileResultRep extends JpaRepository<ProfileResult, Long>{
             "                join profile_task p on profile_result.profile_task_id=p.id\n" +
             "            where profile_result.profile_task_id=?1" )
     Page<ProfileResult> findByIdAndReturnList(Long id, Pageable pageable);
-
-
-
-    @Query(nativeQuery = true,
-                    value = "select prof_id, field_id, date_field, domain, comment, profile_task_id \n" +
-                            "from  find_task_id_by_profile_result\n" +
-                            "where profile_task_id=?1",
-                    countQuery = "select count(1)\n" +
-                            "from  find_task_id_by_profile_result\n" +
-                            "where profile_task_id=?1")
-    Page<ProfileResult> findByProfileTaskId(Long id, Pageable pageable);
-
 
 
 
@@ -67,6 +53,12 @@ public interface ProfileResultRep extends JpaRepository<ProfileResult, Long>{
     ProfileResult findById(long id, long profileId);
 
     ProfileResult findById(long id);
+
+    @Query(nativeQuery = true, value = "select profile_result.id, profile_result.field_id, profile_result.date_field," +
+            " profile_result.domain, profile_result.comment, profile_result.profile_task_id\n" +
+            "from profile_result inner join profile_task on profile_result.profile_task_id= profile_task.id\n" +
+            "where profile_task.id = ?1 and  profile_result.id = ?2")
+    ProfileResult findByTaskIdAndProfileId(long id, long profileId);
 
     @Query(nativeQuery = true,
             value = "select *" +

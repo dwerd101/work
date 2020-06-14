@@ -56,7 +56,7 @@ public class Controller {
     @PutMapping(value = "task/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     List<ProfileResultDto> changeProfileResult(@PathVariable("id") Long standId,
                                                @RequestBody List<ProfileResultDto> profileResultDto) {
-        List<ProfileResultDto> profileResultDtoList = profileResultService.findByIdAndProfileId(standId, profileResultDto);
+        List<ProfileResultDto> profileResultDtoList = profileResultService.findByTaskIdAndProfileId(standId, profileResultDto);
         for (int i = 0; i < profileResultDto.size(); i++) {
             ProfileResultDto profileResult = profileResultDtoList.get(i);
             ProfileResultDto newProfileResult = profileResultDto.get(i);
