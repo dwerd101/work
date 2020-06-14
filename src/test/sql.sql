@@ -8,7 +8,7 @@ create table public.owner (
 	name varchar(255) not null,
 	constraint owners_source_id_fk foreign key (source_id) references public.source (id)
 );
-create table public.table (
+create table public.tables (
 	id integer primary key generated always as identity,
 	owner_id integer not null,
 	name varchar(255) not null,
@@ -75,7 +75,7 @@ create view profile_result_view as
                 join profile_task p on profile_result.profile_task_id=p.id*/
 
 
-    create view find_task_id_by_profile_result
+    create view profile_result_and_task_view
 as
     select profile_result.id as prof_id, field_id, date_field, domain, comment, profile_task_id, profile_task.id as task_id, source_id, create_date, update_date, status
     from profile_result inner join profile_task on profile_task.id=profile_result.id;
