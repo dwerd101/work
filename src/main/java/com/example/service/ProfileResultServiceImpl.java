@@ -9,15 +9,21 @@ import com.example.model.ProfileResultView;
 import com.example.repository.ProfileResultAndProfileTaskRep;
 import com.example.repository.ProfileResultDaoRep;
 import com.example.repository.ProfileResultRep;
+import com.example.repository.ProfileResultViewRep;
 import com.example.specification.SearchCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,11 +36,12 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     private JdbcTemplate jdbcTemplate;
     private ProfileResultDaoRep profileResultDaoRep;
     private ProfileResultAndProfileTaskRep profileResultAndProfileTaskRep;
+    private ProfileResultViewRep profileResultViewRep;
 
 
     @Override
     public Page<ProfileResultDto> findByTaskIdHibernate(Long id, Pageable pageable) {
-        Page<ProfileResultAndProfileTaskView> profileResultAndProfileTaskViewList =  profileResultAndProfileTaskRep.findByProfileTaskId(id, pageable);
+        Page<ProfileResultAndProfileTaskView> profileResultAndProfileTaskViewList = profileResultAndProfileTaskRep.findByProfileTaskId(id, pageable);
         int total = profileResultAndProfileTaskViewList.getTotalPages();
         List<ProfileResultAndProfileTaskView> profileTaskViews = profileResultAndProfileTaskViewList.getContent();
         List<ProfileResult> profileResultList = profileTaskViews.stream().map(profileResultAndProfileTaskView -> {
@@ -104,6 +111,10 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     @Autowired
     public void setProfileResultAndProfileTaskRep(ProfileResultAndProfileTaskRep profileResultAndProfileTaskRep) {
         this.profileResultAndProfileTaskRep = profileResultAndProfileTaskRep;
+    }
+    @Autowired
+    public void setProfileResultViewRep(ProfileResultViewRep profileResultViewRep) {
+        this.profileResultViewRep = profileResultViewRep;
     }
 
     @Override
@@ -196,5 +207,9 @@ public class ProfileResultServiceImpl implements ProfileResultService {
         )).collect(Collectors.toList());
     }
 
+    @Override
+    public List<ProfileResultView> findAll() {
+        return profileResultViewRep.findAll();
 
+    }
 }

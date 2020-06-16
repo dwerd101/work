@@ -21,6 +21,7 @@ public interface ProfileResultService {
     List<ProfileResultView> searchProfile(List<SearchCriteria> params);
     List<ProfileResultDto> findByIdSource(Long id);
     List<ProfileResultDto> findByTaskIdAndProfileId(Long taskId, List<ProfileResultDto> profileId);
+    List<ProfileResultView> findAll();
 
 
 }

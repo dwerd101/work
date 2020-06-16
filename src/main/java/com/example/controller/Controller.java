@@ -1,11 +1,13 @@
 package com.example.controller;
 
 import com.example.dao.ProfileResultService;
+import com.example.dao.SourceService;
 import com.example.dto.ProfileResultDto;
 
 
 import com.example.log.LoggingMethod;
 import com.example.model.ProfileResultView;
+import com.example.model.Source;
 import com.example.specification.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -29,10 +31,11 @@ public class Controller {
 
 
     private ProfileResultService profileResultService;
+    private SourceService sourceService;
 
-
-    public Controller(ProfileResultService profileResultService) {
+    public Controller(ProfileResultService profileResultService, SourceService sourceService) {
         this.profileResultService = profileResultService;
+        this.sourceService = sourceService;
     }
 
     @GetMapping(value = "task/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -79,6 +82,16 @@ public class Controller {
         return profileResultService.searchProfile(params);
 
         
+    }
+
+    @GetMapping("source/all")
+    public List<Source> findSourceAll() {
+        return sourceService.findAll();
+    }
+
+    @GetMapping("profileResultView/findAll")
+    public List<ProfileResultView> findProfileResultViewListAll() {
+       return profileResultService.findAll();
     }
     /*
     *  Переделаю метод который был во 2 приложении
