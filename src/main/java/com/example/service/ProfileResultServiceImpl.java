@@ -6,10 +6,8 @@ import com.example.dto.ProfileResultDto;
 import com.example.model.ProfileResult;
 import com.example.model.ProfileResultAndProfileTaskView;
 import com.example.model.ProfileResultView;
-import com.example.repository.ProfileResultAndProfileTaskRep;
-import com.example.repository.ProfileResultDaoRep;
-import com.example.repository.ProfileResultRep;
-import com.example.repository.ProfileResultViewRep;
+import com.example.model.Source;
+import com.example.repository.*;
 import com.example.specification.SearchCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -26,6 +24,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -37,6 +36,7 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     private ProfileResultDaoRep profileResultDaoRep;
     private ProfileResultAndProfileTaskRep profileResultAndProfileTaskRep;
     private ProfileResultViewRep profileResultViewRep;
+    private SourceRep sourceRep;
 
 
     @Override
@@ -115,6 +115,11 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     @Autowired
     public void setProfileResultViewRep(ProfileResultViewRep profileResultViewRep) {
         this.profileResultViewRep = profileResultViewRep;
+    }
+
+    @Autowired
+    public void setSourceRep(SourceRep sourceRep) {
+        this.sourceRep = sourceRep;
     }
 
     @Override
@@ -210,6 +215,33 @@ public class ProfileResultServiceImpl implements ProfileResultService {
     @Override
     public List<ProfileResultView> findAll() {
         return profileResultViewRep.findAll();
+
+    }
+
+    @Override
+    public List<ProfileResultView> findAllById(Long id) {
+        Optional<Source> sourceName = sourceRep.findById(id);
+        String sourceNameText  ;
+        if(sourceName.isPresent()) sourceNameText = sourceName.get().getName();
+        else return null;
+        return profileResultViewRep.findAllBySourceName(sourceNameText);
+    }
+
+    @Override
+    public void saveProfileResultAll(List<ProfileResultView> profileResultViewList) {
+        List<ProfileResultDto> listConvert = profileResultViewList.stream().map(profileResultView ->
+                new ProfileResultDto(profileResultView.getProfileId(), profileResultView.getSourceName(),
+                        profileResultView.getOwnersName(), profileResultView.getTablesName(),
+                        profileResultView.getFieldName(), profileResultView.getNameDomain(),
+                        profileResultView.getComment())).collect(Collectors.toList());
+        List<ProfileResult> profileResultEntityList = listConvert.stream().map(profileResultDto -> {
+            ProfileResult profileResult = resultRep.findById(profileResultDto.getProfileId());
+            profileResult.setComment(profileResultDto.getComment());
+            profileResultDto.setNameDomain(profileResult.getDomain());
+            return ProfileMapper.INSTANCE.profileResult(profileResultDto, profileResult);
+
+        }).collect(Collectors.toList());
+        resultRep.saveAll(profileResultEntityList);
 
     }
 }

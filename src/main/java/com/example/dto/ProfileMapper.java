@@ -30,6 +30,17 @@ public interface ProfileMapper {
     }
     )
     ProfileResult profileResult(ProfileResultDto profileResultDto, ProfileResult profileResult);
+
+    @Mappings({
+            @Mapping( target = "id", source = "profileResultView.profileId"),
+            @Mapping(target = "fieldId",source = "profileResult.fieldId" ),
+            @Mapping(target = "dateField",source = "profileResult.dateField" ),
+            @Mapping(target = "domain",source = "profileResultView.nameDomain" ),
+            @Mapping(  target = "comment", source = "profileResultView.comment"),
+            @Mapping(target = "profileTaskId", source = "profileResult.profileTaskId")
+    }
+    )
+    ProfileResult profileResult(ProfileResultView profileResultView, ProfileResult profileResult);
 }
 
 

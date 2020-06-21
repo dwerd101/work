@@ -6,6 +6,7 @@ import com.example.dto.ProfileResultDto;
 
 
 import com.example.log.LoggingMethod;
+import com.example.model.ProfileResult;
 import com.example.model.ProfileResultView;
 import com.example.model.Source;
 import com.example.specification.*;
@@ -93,16 +94,15 @@ public class Controller {
     public List<ProfileResultView> findProfileResultViewListAll() {
        return profileResultService.findAll();
     }
-    /*
-    *  Переделаю метод который был во 2 приложении
-    *  Изменить параметр запроса sourceid source/{id} на ProfileTaskId меняю на task/{id}
-    *  s/{id} на task/{id}
-    *  Добавить в ProfileResult столбец taskId и его заполнять
-    *  Создать html страницу и отобразить таблицу.
-    *  На странице список source
-    *  ProfileResultView 2 страница.
-    *
-    * */
+
+    @GetMapping("source/profileResultView/{id}")
+    public List<ProfileResultView> findProfileResultViewBySourceName(@PathVariable Long id) {
+        return profileResultService.findAllById(id);
+    }
+    @PutMapping("profileResultView/save")
+    public void saveProfileResultTextIdAndComment(@RequestBody List<ProfileResultView> profileResultViewList) {
+        profileResultService.saveProfileResultAll(profileResultViewList);
+    }
 }
 
 

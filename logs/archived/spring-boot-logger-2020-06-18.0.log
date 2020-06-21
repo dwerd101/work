@@ -1,0 +1,357 @@
+2020-06-18 13:37:57,560 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 14708 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 13:37:57,573 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 13:37:57,579 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 13:37:58,577 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 13:37:58,578 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 13:37:58,640 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 52ms. Found 4 JPA repository interfaces.
+2020-06-18 13:37:58,807 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 13:37:58,807 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 13:37:58,815 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 7ms. Found 0 JDBC repository interfaces.
+2020-06-18 13:37:59,669 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 13:37:59,680 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 13:37:59,681 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 13:37:59,681 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 13:37:59,817 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 13:37:59,817 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2137 ms
+2020-06-18 13:38:00,046 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 13:38:00,256 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 13:38:00,447 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 13:38:00,550 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 13:38:00,786 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 13:38:00,822 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 13:38:01,642 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 13:38:01,648 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 13:38:02,105 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 13:38:02,229 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 13:38:02,508 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 13:38:02,533 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 13:38:02,604 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 13:38:02,613 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 5.862 seconds (JVM running for 7.803)
+2020-06-18 13:38:56,700 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 13:38:56,701 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 13:38:56,707 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 6 ms
+2020-06-18 14:49:39,269 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 8916 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 14:49:39,274 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 14:49:39,275 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 14:49:39,897 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 14:49:39,898 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 14:49:39,946 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-06-18 14:49:40,063 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 14:49:40,063 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 14:49:40,070 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 6ms. Found 0 JDBC repository interfaces.
+2020-06-18 14:49:40,535 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 14:49:40,545 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 14:49:40,546 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 14:49:40,546 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 14:49:40,646 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 14:49:40,646 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1226 ms
+2020-06-18 14:49:40,812 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 14:49:40,917 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 14:49:41,076 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 14:49:41,151 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 14:49:41,232 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 14:49:41,253 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 14:49:42,143 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 14:49:42,149 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 14:49:42,547 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 14:49:42,654 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 14:49:42,892 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 14:49:42,923 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 14:49:42,990 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 14:49:42,999 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.206 seconds (JVM running for 4.967)
+2020-06-18 14:50:26,171 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 14:50:26,172 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 14:50:26,179 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 7 ms
+2020-06-18 15:34:23,680 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 12832 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 15:34:23,692 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 15:34:23,693 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 15:34:24,305 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:34:24,306 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 15:34:24,353 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 42ms. Found 4 JPA repository interfaces.
+2020-06-18 15:34:24,465 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:34:24,466 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 15:34:24,471 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-06-18 15:34:24,951 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 15:34:24,960 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:34:24,960 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 15:34:24,961 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:34:25,062 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 15:34:25,062 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1309 ms
+2020-06-18 15:34:25,227 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 15:34:25,294 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 15:34:25,446 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 15:34:25,519 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 15:34:25,596 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 15:34:25,616 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 15:34:26,321 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 15:34:26,328 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:34:26,735 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 15:34:26,847 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:34:27,081 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 15:34:27,105 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:34:27,174 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 15:34:27,183 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 3.907 seconds (JVM running for 4.683)
+2020-06-18 15:35:16,546 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 6172 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 15:35:16,549 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 15:35:16,549 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 15:35:17,054 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:35:17,054 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 15:35:17,106 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45ms. Found 4 JPA repository interfaces.
+2020-06-18 15:35:17,226 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:35:17,227 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 15:35:17,233 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 6ms. Found 0 JDBC repository interfaces.
+2020-06-18 15:35:17,814 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 15:35:17,822 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:35:17,823 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 15:35:17,823 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:35:17,928 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 15:35:17,928 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1319 ms
+2020-06-18 15:35:18,129 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 15:35:18,169 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 15:35:18,290 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 15:35:18,376 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 15:35:18,458 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 15:35:18,489 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 15:35:19,221 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 15:35:19,227 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:35:19,699 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 15:35:19,847 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:35:20,146 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 15:35:20,173 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:35:20,247 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 15:35:20,258 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.488 seconds (JVM running for 5.733)
+2020-06-18 15:49:54,065 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 15:49:54,066 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 15:49:54,074 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 8 ms
+2020-06-18 15:50:05,692 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.example.service.ProfileResultServiceImpl.findAllById(ProfileResultServiceImpl.java:218)
+	at com.example.controller.Controller.findProfileResultViewBySourceName(Controller.java:99)
+	at com.example.controller.Controller$$FastClassBySpringCGLIB$$94ffb01d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.example.controller.Controller$$EnhancerBySpringCGLIB$$2cb0ba8c.findProfileResultViewBySourceName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-06-18 15:50:53,930 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.example.service.ProfileResultServiceImpl.findAllById(ProfileResultServiceImpl.java:218)
+	at com.example.controller.Controller.findProfileResultViewBySourceName(Controller.java:99)
+	at com.example.controller.Controller$$FastClassBySpringCGLIB$$94ffb01d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.example.controller.Controller$$EnhancerBySpringCGLIB$$2cb0ba8c.findProfileResultViewBySourceName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-06-18 15:51:35,936 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:51:35,937 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:51:35,940 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-06-18 15:51:35,945 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-06-18 15:51:41,463 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 15004 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 15:51:41,467 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 15:51:41,468 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 15:51:42,108 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:51:42,109 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 15:51:42,160 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 44ms. Found 4 JPA repository interfaces.
+2020-06-18 15:51:42,277 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:51:42,278 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 15:51:42,284 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-06-18 15:51:42,844 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 15:51:42,853 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:51:42,854 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 15:51:42,855 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:51:42,956 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 15:51:42,956 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1297 ms
+2020-06-18 15:51:43,149 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 15:51:43,185 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 15:51:43,278 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 15:51:43,367 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 15:51:43,449 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 15:51:43,478 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 15:51:44,209 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 15:51:44,215 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:51:44,693 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 15:51:44,821 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:51:45,120 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 15:51:45,151 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:51:45,232 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 15:51:45,243 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.369 seconds (JVM running for 5.537)
+2020-06-18 15:51:49,975 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 15:51:49,977 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 15:51:49,986 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 8 ms
+2020-06-18 15:53:58,329 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:53:58,330 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:53:58,333 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-06-18 15:53:58,338 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-06-18 15:54:01,624 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 1888 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 15:54:01,629 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 15:54:01,630 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 15:54:02,272 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:54:02,272 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 15:54:02,327 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 49ms. Found 4 JPA repository interfaces.
+2020-06-18 15:54:02,452 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:54:02,452 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 15:54:02,458 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-06-18 15:54:03,223 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 15:54:03,234 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:54:03,234 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 15:54:03,234 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:54:03,340 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 15:54:03,340 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1621 ms
+2020-06-18 15:54:03,997 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 15:54:04,049 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 15:54:04,194 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 15:54:04,291 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 15:54:04,389 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 15:54:04,407 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 15:54:05,297 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 15:54:05,303 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:54:05,964 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 15:54:06,078 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:54:06,327 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 15:54:06,352 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:54:06,426 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 15:54:06,435 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 5.188 seconds (JVM running for 5.896)
+2020-06-18 15:54:12,688 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 15:54:12,689 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 15:54:12,696 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 6 ms
+2020-06-18 15:54:58,408 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 14748 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-18 15:54:58,410 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-18 15:54:58,411 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 15:54:59,056 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:54:59,057 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 15:54:59,103 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 39ms. Found 4 JPA repository interfaces.
+2020-06-18 15:54:59,220 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-18 15:54:59,220 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-18 15:54:59,227 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 6ms. Found 0 JDBC repository interfaces.
+2020-06-18 15:54:59,733 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-18 15:54:59,740 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:54:59,740 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 15:54:59,740 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:54:59,836 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 15:54:59,837 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1354 ms
+2020-06-18 15:54:59,999 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 15:55:00,034 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 15:55:00,111 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 15:55:00,180 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 15:55:00,254 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 15:55:00,273 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-18 15:55:00,883 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 15:55:00,889 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 15:55:01,288 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 15:55:01,406 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:55:01,684 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-18 15:55:01,716 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-18 15:55:01,789 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-18 15:55:01,800 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 3.743 seconds (JVM running for 4.491)
+2020-06-18 15:55:05,323 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 15:55:05,324 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 15:55:05,331 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 7 ms

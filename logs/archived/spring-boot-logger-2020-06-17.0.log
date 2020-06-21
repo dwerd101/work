@@ -1,0 +1,96 @@
+2020-06-17 10:25:17,481 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 13880 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-17 10:25:17,512 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 10:25:17,513 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-17 10:25:19,285 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 10:25:19,290 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-17 10:25:19,364 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58ms. Found 4 JPA repository interfaces.
+2020-06-17 10:25:19,608 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 10:25:19,609 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 10:25:19,622 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 12ms. Found 0 JDBC repository interfaces.
+2020-06-17 10:25:20,612 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-17 10:25:20,627 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-17 10:25:20,628 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-17 10:25:20,629 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 10:25:20,843 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-17 10:25:20,845 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3191 ms
+2020-06-17 10:25:21,208 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 10:25:21,282 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 10:25:21,634 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 10:25:21,791 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-17 10:25:21,923 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-17 10:25:21,942 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-17 10:25:22,864 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 10:25:22,870 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 10:25:23,374 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 10:25:23,547 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 10:25:23,844 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-17 10:25:23,872 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-17 10:25:23,950 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-17 10:25:23,963 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 7.266 seconds (JVM running for 8.412)
+2020-06-17 10:27:51,829 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 10:27:51,829 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-17 10:27:51,844 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 15 ms
+2020-06-17 10:30:38,649 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 7456 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-17 10:30:38,652 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 10:30:38,652 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-17 10:30:39,629 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 10:30:39,629 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-17 10:30:39,691 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 54ms. Found 4 JPA repository interfaces.
+2020-06-17 10:30:39,826 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 10:30:39,826 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 10:30:39,833 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 6ms. Found 0 JDBC repository interfaces.
+2020-06-17 10:30:40,359 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-17 10:30:40,366 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-17 10:30:40,366 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-17 10:30:40,367 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 10:30:40,487 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-17 10:30:40,487 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1782 ms
+2020-06-17 10:30:40,668 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 10:30:40,703 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 10:30:40,801 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 10:30:40,885 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-17 10:30:41,073 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-17 10:30:41,090 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-17 10:30:41,835 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 10:30:41,842 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 10:30:42,261 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 10:30:42,388 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 10:30:42,666 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-17 10:30:42,691 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-17 10:30:42,774 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-17 10:30:42,783 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.537 seconds (JVM running for 5.536)
+2020-06-17 10:30:43,074 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 10:30:43,075 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-17 10:30:43,081 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 6 ms
+2020-06-17 13:57:47,986 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on User-PC with PID 9272 (C:\Users\Professional\Desktop\demo\target\classes started by Professional in C:\Users\Professional\Desktop\demo)
+2020-06-17 13:57:47,988 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 13:57:47,989 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-17 13:57:48,925 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 13:57:48,925 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-17 13:57:48,987 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55ms. Found 4 JPA repository interfaces.
+2020-06-17 13:57:49,110 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 13:57:49,110 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 13:57:49,116 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5ms. Found 0 JDBC repository interfaces.
+2020-06-17 13:57:49,573 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2020-06-17 13:57:49,581 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2020-06-17 13:57:49,581 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-17 13:57:49,582 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 13:57:49,678 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-17 13:57:49,678 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1629 ms
+2020-06-17 13:57:49,834 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 13:57:49,864 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 13:57:49,940 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 13:57:50,005 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-17 13:57:50,080 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-17 13:57:50,095 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-06-17 13:57:50,684 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 13:57:50,690 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 13:57:51,043 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 13:57:51,147 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 13:57:51,396 WARN org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [main] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-17 13:57:51,420 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2020-06-17 13:57:51,570 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-17 13:57:51,592 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.168 seconds (JVM running for 5.184)
+2020-06-17 13:59:57,718 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 13:59:57,719 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-17 13:59:57,728 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 8 ms

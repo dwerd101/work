@@ -22,6 +22,8 @@ public interface ProfileResultService {
     List<ProfileResultDto> findByIdSource(Long id);
     List<ProfileResultDto> findByTaskIdAndProfileId(Long taskId, List<ProfileResultDto> profileId);
     List<ProfileResultView> findAll();
+    List<ProfileResultView> findAllById(Long id);
+    void saveProfileResultAll(List<ProfileResultView> profileResultViewList);
 
 
 }
